@@ -23,3 +23,49 @@ body{
     text-align: center;
     
 }
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+
+}
+
+.search input{
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    font-size: 18px;
+    flex: 1;
+    margin-right: 16px;
+    height: 60px;
+
+
+}
+
+.search button {
+    border-radius: 50%;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background: #ebfffc;
+    width: 60px;
+    height: 60px;
+
+}
+
+.search button img{
+    width: 16px;
+}
+
+.details{
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+    padding: 40px;
+}

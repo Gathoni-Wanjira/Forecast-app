@@ -41,8 +41,15 @@
 <script> 
 
 const apiKey = "5864589adc68d767a508dc23606fcb51";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=kisumu";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=nairobi";
 
+async function checkWeather(){
+    const response = await fetch(apiUrl + `&appid=${apiKey}`);
+    var data = await response.json();
+    console.log(data);
+
+}
+checkWeather();
 </script>
 
 </body>

@@ -88,32 +88,55 @@ body{
 
 /* Wind and humidity section */
 .details{
-    padding-top: 60px;
+    padding: 50px;
     justify-content: space-between;
-    margin: auto;
-    display: inline-flex;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
 
     
 }
 
+/* Left Column */
 .col1{
     
-     margin-right: 180px; 
+    text-align: left;
+    align-items: center;
+    margin-right: 85px;
+    
+    
 }
 
-.humidity{
-    width: 100px;
+.col1 img{
+    width: 70px;
+    margin-right: 10px;
 
 }
 
-.wind{
-    width: 100px;
+
+/* Right Column*/
+
+.col2{
+    
+    text-align: left;
+    align-items: center;
+    
+}
+
+.col2 img{
+    width: 70px;
+    margin-right: 10px;
 
 }
 
-.details p{
-    font-size: 25px;
-    font-weight: 200;
+/* Temparature */
+.temp {
+    font-size: 28px;
+    margin-top: -6px;
 
-
+}
+/* Weather text */
+.weather-text{
+    font-size: 30px;
+    font-weight: 100;
 }

@@ -23,14 +23,14 @@
             <div class="details">
                 <div class="col1">
                     <img src="icons/humidity.png" >
-                    <p class="temp">90%</p>
+                    <p class="humidity">90%</p>
                     <p class="weather-text">Humidity</p>
                 </div>
                 
 
                 <div class="col2">
                     <img src="icons/wind.png" >
-                    <p class="temp">2.68km/h</p>
+                    <p class="wind">2.68km/h</p>
                     <p class="weather-text">Wind Speed</p>
                 
             </div>
@@ -47,6 +47,14 @@ async function checkWeather(){
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
     var data = await response.json();
     console.log(data);
+
+
+    document.querySelector(".city").innerHTML=data.name;
+    document.querySelector(".temp").innerHTML=data.main.temp + "°C" ;
+    document.querySelector(".humidity").innerHTML=data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+
+
 
 }
 checkWeather();

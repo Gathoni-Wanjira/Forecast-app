@@ -45,10 +45,13 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=
 
 const searchBox = document.querySelector(".search input");
 const searchButton = document.querySelector(".search button");
+const weatherIcon = document.querySelector("weather-icon");
 
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await response.json();
+
+
     console.log(data);
 
 
@@ -56,6 +59,28 @@ async function checkWeather(city){
     document.querySelector(".temp").innerHTML= Math.round (data.main.temp) + "°C" ;
     document.querySelector(".humidity").innerHTML=data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+
+    if (data.weather[0].main == "clouds"){
+        weatherIcon.src = "icons/clouds.png";
+    }
+    else if (data.weather[0].main == "drizzle"){
+        weatherIcon.src = "icons/drizzle.png";
+    }
+    else if (data.weather[0].main == "mist"){
+        weatherIcon.src = "icons/mist.png";
+    }
+    else if (data.weather[0].main == "rain"){
+        weatherIcon.src = "icons/rain.png";
+    }
+    else if (data.weather[0].main == "snow"){
+        weatherIcon.src = "icons/snow.png";
+    }
+    else if (data.weather[0].main == "wind"){
+        weatherIcon.src = "icons/wind.png";
+    }
+    else if (data.weather[0].main == "clear"){
+        weatherIcon.src = "icons/clear.png";
+    }
 
 }
 

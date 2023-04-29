@@ -113,6 +113,12 @@ body{
 
 }
 
+.humidity {
+    font-size: 28px;
+    margin-top: -6px;
+
+}
+
 
 /* Right Column*/
 
@@ -129,8 +135,8 @@ body{
 
 }
 
-/* Temparature */
-.temp {
+
+.wind {
     font-size: 28px;
     margin-top: -6px;
 
@@ -140,3 +146,9 @@ body{
     font-size: 30px;
     font-weight: 100;
 }
+
+.weather{
+
+    display: none;
+}
+
